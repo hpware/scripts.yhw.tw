@@ -8,7 +8,7 @@ if (strpos($link, "../") !== false) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = $_POST['content'] ?? '';
-    $myfile = fopen($link, "w") or die("Unable to open file!");
+    $myfile = fopen($link, "w");
     fwrite($myfile, $content);
     fclose($myfile);
     echo "File written successfully";
