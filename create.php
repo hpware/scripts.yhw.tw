@@ -8,7 +8,7 @@ if (strpos($link, "../") !== false) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = $_POST['content'] ?? '';
-    $myfile = fopen($link, "w");
+    $myfile = fopen($link, "w") or die("Unable to open file!");
     fwrite($myfile, $content);
     fclose($myfile);
     echo "File written successfully";
@@ -17,6 +17,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <form action="create.php" method="POST">
     <textarea name="content"></textarea>
-    <input type="text" name="filename" />
     <input type="submit"/>
 </form>
