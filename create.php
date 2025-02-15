@@ -5,7 +5,7 @@ if (strpos($link, "../") !== false) {
     die("error");
 }
 
-$myfile = fopen($link, "w") or die("Unable to open file!");
+$myfile = fopen($link, "w");
 
 ?>
 <form submit="create.php" method="POST">
