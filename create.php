@@ -9,6 +9,7 @@ $myfile = fopen($link, "w");
 
 ?>
 <form submit="create.php" method="POST">
-    <textarea/>
+    <textarea></textarea>
     <input type="text" />
+    <input type="submit"/>
 </form>
